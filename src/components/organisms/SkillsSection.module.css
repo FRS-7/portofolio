@@ -1,0 +1,132 @@
+.skills {
+  position: relative;
+  z-index: 1;
+}
+
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.categoryCard {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 28px 24px;
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.categoryCard:hover {
+  border-color: rgba(201, 168, 76, 0.35);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(201, 168, 76, 0.08);
+}
+
+.categoryName {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  letter-spacing: 0.04em;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.categoryIcon {
+  color: var(--accent-gold);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* ---- Skill Item ---- */
+.skillList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillName {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+}
+
+.skillLevel {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.06em;
+}
+
+/* ---- Gauge ---- */
+.gaugeTrack {
+  position: relative;
+  height: 8px;
+  background: rgba(30, 58, 95, 0.5);
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.gaugeFill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--accent-gold-dark),
+    var(--skill-color, #c9a84c),
+    var(--accent-gold-light)
+  );
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.4);
+}
+
+.gaugeSegments {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+
+.gaugeSegment {
+  flex: 1;
+  border-right: 1px solid rgba(6, 8, 16, 0.5);
+}
+
+.gaugeSegment:last-child {
+  border-right: none;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .categoriesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+  }
+}

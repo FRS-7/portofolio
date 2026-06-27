@@ -1,0 +1,349 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+  padding-top: var(--nav-height);
+}
+
+.heroGlow {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 500px;
+  background: radial-gradient(ellipse, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ---- Rune Ring ---- */
+.runeRing {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.runeRingInner,
+.runeRingOuter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 168, 76, 0.12);
+}
+
+.runeRingInner {
+  width: 320px;
+  height: 320px;
+  transform: translate(-50%, -50%);
+  animation: runeRotate 20s linear infinite;
+}
+
+.runeRingOuter {
+  width: 480px;
+  height: 480px;
+  transform: translate(-50%, -50%);
+  animation: runeRotate 35s linear infinite reverse;
+  border-color: rgba(30, 58, 95, 0.3);
+}
+
+/* ---- Layout ---- */
+.heroContent {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+/* ---- Text Side ---- */
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 620px;
+}
+
+.preTitle {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  opacity: 0.75;
+}
+
+.preLine {
+  display: block;
+  height: 1px;
+  width: 40px;
+  background: var(--accent-gold);
+  opacity: 0.5;
+}
+
+.mainTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+}
+
+.titleI {
+  color: var(--text-muted);
+  font-size: 0.65em;
+}
+
+.titleName {
+  background: linear-gradient(135deg, #e8c96a, #c9a84c, #9a7a30, #c9a84c);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 4s linear infinite;
+  display: block;
+}
+
+/* ---- Typewriter ---- */
+.roleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  font-family: var(--font-mono);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: rgba(30, 58, 95, 0.25);
+  border: 1px solid var(--border-subtle);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  width: fit-content;
+}
+
+.rolePrefix {
+  color: var(--accent-gold);
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+.roleText {
+  color: var(--accent-gold-light);
+}
+
+.cursor {
+  color: var(--accent-gold);
+  animation: typewriterBlink 1s step-end infinite;
+  margin-left: 2px;
+}
+
+/* ---- Bio ---- */
+.bio {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 520px;
+}
+
+/* ---- CTA ---- */
+.ctaGroup {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ---- Social ---- */
+.socialRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.socialLink:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  box-shadow: var(--glow-gold-sm);
+  transform: translateY(-2px);
+}
+
+/* ---- Avatar ---- */
+.avatarWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatarRing {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarFrame {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--accent-gold);
+  box-shadow: var(--glow-gold), inset 0 0 30px rgba(30, 58, 95, 0.5);
+  position: relative;
+  z-index: 2;
+  animation: floatY 6s ease-in-out infinite;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarPlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--bg-panel-dark), var(--bg-panel));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarInitial {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  text-shadow: var(--glow-gold);
+}
+
+.orbitalRing1 {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px dashed rgba(201, 168, 76, 0.25);
+  animation: runeRotate 12s linear infinite;
+}
+
+.orbitalRing2 {
+  position: absolute;
+  inset: -20px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  animation: runeRotate 20s linear infinite reverse;
+}
+
+/* ---- Location Badge ---- */
+.locationBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  background: rgba(30, 58, 95, 0.3);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.locationBadge span:first-child {
+  color: var(--accent-gold);
+  font-size: 0.65rem;
+}
+
+/* ---- Scroll Indicator ---- */
+.scrollIndicator {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--accent-gold);
+  opacity: 0.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  z-index: 2;
+}
+
+.scrollIndicator:hover {
+  opacity: 1;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .heroContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+    justify-items: center;
+  }
+  .heroText {
+    align-items: center;
+    max-width: 100%;
+  }
+  .preTitle {
+    justify-content: center;
+  }
+  .ctaGroup {
+    justify-content: center;
+  }
+  .socialRow {
+    justify-content: center;
+  }
+  .roleWrapper {
+    font-size: 0.85rem;
+  }
+  .avatarWrapper {
+    order: -1;
+  }
+  .runeRing {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .avatarFrame {
+    width: 160px;
+    height: 160px;
+  }
+  .avatarRing {
+    width: 200px;
+    height: 200px;
+  }
+  .avatarInitial {
+    font-size: 2.5rem;
+  }
+}

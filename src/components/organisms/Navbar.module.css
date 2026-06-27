@@ -1,0 +1,216 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(6, 8, 16, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom-color: var(--border-subtle);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--nav-height);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  gap: 24px;
+}
+
+/* ---- Logo ---- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.logoIcon {
+  font-size: 1.4rem;
+  color: var(--accent-gold);
+  filter: drop-shadow(0 0 6px rgba(201, 168, 76, 0.6));
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+.logoText {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--accent-gold);
+}
+
+.logoSub {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ---- Nav Links ---- */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.navLink {
+  position: relative;
+  display: block;
+  padding: 8px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--accent-gold);
+}
+
+.navLinkText {
+  position: relative;
+  z-index: 1;
+}
+
+.navLinkUnderline {
+  position: absolute;
+  bottom: 4px;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background: var(--accent-gold);
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.8);
+}
+
+/* ---- Gallery Button ---- */
+.galleryBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid var(--accent-gold);
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.galleryBtn:hover {
+  background: var(--accent-gold);
+  color: var(--bg-deep);
+  box-shadow: var(--glow-gold);
+}
+
+.galleryBtnIcon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* ---- Mobile Toggle ---- */
+.menuToggle {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  color: var(--accent-gold);
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.menuToggle:hover {
+  border-color: var(--accent-gold);
+  box-shadow: var(--glow-gold-sm);
+}
+
+/* ---- Mobile Menu ---- */
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  background: rgba(6, 8, 16, 0.97);
+  border-top: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.mobileLink,
+.mobileLinkGold {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 14px 24px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.05);
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+
+.mobileLink:hover {
+  color: var(--accent-gold);
+  padding-left: 32px;
+}
+
+.mobileLinkGold {
+  color: var(--accent-gold);
+  letter-spacing: 0.08em;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .navLinks,
+  .galleryBtn {
+    display: none;
+  }
+  .menuToggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navInner {
+    padding: 0 16px;
+  }
+}

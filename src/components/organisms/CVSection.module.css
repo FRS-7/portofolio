@@ -1,0 +1,128 @@
+.cv {
+  position: relative;
+  z-index: 1;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.questCard {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 40px;
+  backdrop-filter: blur(12px);
+  text-align: center;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.questCard:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(201, 168, 76, 0.08);
+}
+
+.cardHeader {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  box-shadow: var(--glow-gold-sm);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.timelineSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: rgba(30, 58, 95, 0.15);
+  border: 1px solid rgba(30, 58, 95, 0.3);
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.itemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(201, 168, 76, 0.08);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+.itemContent {
+  flex-grow: 1;
+}
+
+.itemRole {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.itemMeta {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.actionArea {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .questCard {
+    padding: 24px 16px;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,3 @@
+/* SectionTitle.module.css */
+/* Styles are handled globally in index.css, but this module exists to prevent import resolution failures */
+.placeholder {}
