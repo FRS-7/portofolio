@@ -81,7 +81,7 @@ export const projects = [
     liveUrl: "https://sipuskesmas.vercel.app/",
     githubUrl: "https://github.com/FRS-7/SiPuskesmas",
     featured: true,
-    image: null, 
+    image: null,
   },
   {
     id: 2,
