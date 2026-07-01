@@ -112,7 +112,7 @@ export const experience = [
     id: 1,
     role: "Teknik Kendaraan Ringan Otomotif",
     company: "SMK Syafi'i Akrom Kota Pekalongan",
-    period: "2020 - 2023",
+    period: "2019 - 2022",
     description:
       "Mempelajari teknik-teknik otomotif, termasuk mesin, kelistrikan, dan sistem transmisi.",
     type: "education",
