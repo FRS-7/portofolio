@@ -3,13 +3,13 @@
 // ============================================================
 
 export const personalInfo = {
-  name: "Aldric Vaelan",
+  name: "Faris Manaf",
   title: "Full Stack Developer",
   subtitle: "Weaver of Code & Digital Realms",
   bio: "Seorang pengembang yang bersemangat dalam membangun pengalaman digital yang imersif dan berkesan. Dengan keahlian di frontend dan backend, saya mencipta solusi yang tidak hanya fungsional, tetapi juga memikat secara visual.",
   location: "Indonesia",
-  email: "aldric.vaelan@example.com",
-  cvFile: "/cv-aldric-vaelan.pdf", // Ganti dengan nama file CV Anda di folder /public
+  email: "farismanaf7@gmail.com",
+  cvFile: "/cv.pdf", // Ganti dengan nama file CV Anda di folder /public
   avatar: null, // Ganti dengan path foto Anda, contoh: "/photo.jpg"
 };
 
@@ -17,7 +17,7 @@ export const socialLinks = [
   {
     id: "github",
     label: "GitHub",
-    url: "https://github.com/username",
+    url: "https://github.com/FRS-7",
     icon: "GitBranch",
   },
   {
@@ -29,7 +29,7 @@ export const socialLinks = [
   {
     id: "instagram",
     label: "Instagram",
-    url: "https://instagram.com/username",
+    url: "https://instagram.com/This_Is7",
     icon: "Camera",
   },
 ];
@@ -74,12 +74,12 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: "Arcane Market",
+    title: "SiPuskesmas",
     description:
-      "Platform e-commerce dengan fitur lengkap: autentikasi, manajemen produk, keranjang belanja, dan pembayaran terintegrasi. Dibangun dengan Laravel dan Vue.js.",
-    tags: ["Laravel", "Vue.js", "MySQL", "Tailwind"],
-    liveUrl: "https://example.com/arcane-market",
-    githubUrl: "https://github.com/username/arcane-market",
+      "Aplikasi Sistem Informasi Puskesmas berbasis web untuk membantu petugas kesehatan dalam mengelola data pasien, rekam medis, dan administrasi puskesmas. Dibangun dengan React.js",
+    tags: ["React.js"],
+    liveUrl: "https://sipuskesmas.vercel.app/",
+    githubUrl: "https://github.com/FRS-7/SiPuskesmas",
     featured: true,
     image: null, // akan di-generate
   },
@@ -159,35 +159,3 @@ export const experience = [
   },
 ];
 
-export const models3D = [
-  {
-    id: 1,
-    name: "rapier",
-    description: "sebuah senjata fantasi bernama rapier, dengan detail yang halus dan elegan",
-    file: "/models/rapier.glb",
-    thumbnail: null,
-    scale: [1, 1, 1],
-    position: [0, 0, 0],
-    rotation: [0, 0, 0],
-  },
-  {
-    id: 2,
-    name: "barrel",
-    description: "sebuah barrel yang terbuat dari kayu dengan detail yang halus dan elegan",
-    file: "/models/barrel.glb",
-    thumbnail: null,
-    scale: [1, 1, 1],
-    position: [0, 0, 0],
-    rotation: [0, 0, 0],
-  },
-  {
-    id: 3,
-    name: "rapier2",
-    description: "sebuah pedang ",
-    file: "/models/rapier2.glb",
-    thumbnail: null,
-    scale: [1, 1, 1],
-    position: [0, 0, 0],
-    rotation: [0, 0, 0],
-  },
-];

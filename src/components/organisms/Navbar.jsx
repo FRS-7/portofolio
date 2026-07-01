@@ -31,7 +31,7 @@ export default function Navbar({ currentSection = 'hero', onNavClick }) {
         {/* Logo */}
         <button onClick={() => handleClick('hero')} className={styles.logo}>
           <span className={styles.logoIcon}>⬡</span>
-          <span className={styles.logoText}>VAELAN</span>
+          <span className={styles.logoText}>FRS7</span>
           <span className={styles.logoSub}>.DEV</span>
         </button>
 
@@ -56,8 +56,8 @@ export default function Navbar({ currentSection = 'hero', onNavClick }) {
           ))}
         </ul>
 
-        {/* Right: 3D Gallery CTA */}
-        <a href="/gallery-3d" className={styles.galleryBtn}>
+        {/* Right: 3D Gallery CTA (External Link) */}
+        <a href="https://your-3d-web-link.com" target="_blank" rel="noopener noreferrer" className={styles.galleryBtn}>
           <span className={styles.galleryBtnIcon}>◈</span>
           <span>3D Gallery</span>
         </a>
@@ -91,7 +91,7 @@ export default function Navbar({ currentSection = 'hero', onNavClick }) {
                 {link.label}
               </button>
             ))}
-            <a href="/gallery-3d" className={styles.mobileLinkGold}>
+            <a href="https://your-3d-web-link.com" target="_blank" rel="noopener noreferrer" className={styles.mobileLinkGold}>
               ◈ 3D Gallery
             </a>
           </motion.div>

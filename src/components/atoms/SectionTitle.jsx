@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import styles from './SectionTitle.module.css';
+
 
 export default function SectionTitle({ label, title, highlight }) {
   return (
