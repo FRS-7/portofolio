@@ -85,12 +85,12 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Veil Dashboard",
+    title: "Gallery 3D Web",
     description:
-      "Dashboard analitik real-time untuk monitoring data bisnis. Visualisasi data interaktif dengan Chart.js dan notifikasi live menggunakan WebSocket.",
-    tags: ["React", "Node.js", "WebSocket", "Chart.js"],
-    liveUrl: "https://example.com/veil-dashboard",
-    githubUrl: "https://github.com/username/veil-dashboard",
+      "Website galeri berbasis 3D menggunakan Three.js",
+    tags: ["React", "Three.js", "Blender 3D"],
+    liveUrl: "https://gallery3d-web.vercel.app/",
+    githubUrl: "https://github.com/FRS-7/Gallery3D",
     featured: true,
     image: null,
   },

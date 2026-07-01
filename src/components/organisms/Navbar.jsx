@@ -57,7 +57,7 @@ export default function Navbar({ currentSection = 'hero', onNavClick }) {
         </ul>
 
         {/* Right: 3D Gallery CTA (External Link) */}
-        <a href="https://your-3d-web-link.com" target="_blank" rel="noopener noreferrer" className={styles.galleryBtn}>
+        <a href="https://gallery3d-web.vercel.app/" target="_blank" rel="noopener noreferrer" className={styles.galleryBtn}>
           <span className={styles.galleryBtnIcon}>◈</span>
           <span>3D Gallery</span>
         </a>
