@@ -81,7 +81,7 @@ export const projects = [
     liveUrl: "https://sipuskesmas.vercel.app/",
     githubUrl: "https://github.com/FRS-7/SiPuskesmas",
     featured: true,
-    image: null, // akan di-generate
+    image: null, 
   },
   {
     id: 2,
@@ -96,34 +96,12 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Runic Blog CMS",
+    title: "Sistem Watermarking Berbasis Web Menggunakan Algoritma LSB ",
     description:
-      "Content Management System custom dengan editor markdown, sistem kategori, komentar, dan panel admin yang intuitif.",
-    tags: ["PHP", "MySQL", "JavaScript", "CSS"],
-    liveUrl: "https://example.com/runic-blog",
-    githubUrl: "https://github.com/username/runic-blog",
-    featured: false,
-    image: null,
-  },
-  {
-    id: 4,
-    title: "Phantom Task Manager",
-    description:
-      "Aplikasi manajemen tugas dengan fitur drag-and-drop, kolaborasi tim real-time, dan notifikasi berbasis push notification.",
-    tags: ["React", "Firebase", "Tailwind", "DnD Kit"],
-    liveUrl: "https://example.com/phantom-tasks",
-    githubUrl: "https://github.com/username/phantom-tasks",
-    featured: false,
-    image: null,
-  },
-  {
-    id: 5,
-    title: "Aether Weather",
-    description:
-      "Aplikasi cuaca minimalis dengan animasi latar yang menyesuaikan kondisi cuaca, forecast 7 hari, dan lokasi otomatis.",
-    tags: ["React", "OpenWeather API", "Framer Motion"],
-    liveUrl: "https://example.com/aether-weather",
-    githubUrl: "https://github.com/username/aether-weather",
+      "Sistem watermarking berbasis web menggunakan algoritma LSB (Least Significant Bit) berbasis seed untuk menyisipkan watermark ke dalam citra digital. Sistem ini memungkinkan pengguna untuk menyisipkan dan mengekstrak watermark dari citra digital.",
+    tags: ["html", "css", "javascript"],
+    liveUrl: "https://frs-7.github.io/watermarking/",
+    githubUrl: "https://github.com/FRS-7/watermarking",
     featured: false,
     image: null,
   },
@@ -132,30 +110,30 @@ export const projects = [
 export const experience = [
   {
     id: 1,
-    role: "Full Stack Developer",
-    company: "Phantom Tech Studio",
-    period: "2023 — Present",
+    role: "Teknik Kendaraan Ringan Otomotif",
+    company: "SMK Syafi'i Akrom Kota Pekalongan",
+    period: "2020 - 2023",
     description:
-      "Membangun dan memelihara aplikasi web skala besar menggunakan React dan Laravel. Berkolaborasi dengan tim desain untuk menghadirkan UI yang konsisten dan berperforma tinggi.",
-    type: "work",
+      "Mempelajari teknik-teknik otomotif, termasuk mesin, kelistrikan, dan sistem transmisi.",
+    type: "education",
   },
   {
     id: 2,
-    role: "Frontend Developer (Freelance)",
-    company: "Self-Employed",
-    period: "2022 — 2023",
+    role: "Mahasiswa",
+    company: "Institut Teknologi dan Sains Nahdlatul Ulama Pekalongan",
+    period: "2023 — Sekarang",
     description:
-      "Mengerjakan berbagai proyek freelance untuk klien dari berbagai industri. Spesialisasi di landing page, e-commerce, dan dashboard.",
-    type: "work",
+      "Mempelajari teknik-teknik informatika, termasuk pemrograman, basis data, dan sistem informasi.",
+    type: "education",
   },
   {
     id: 3,
-    role: "S1 Teknik Informatika",
-    company: "Universitas Nusantara",
-    period: "2019 — 2023",
+    role: "Magang di bidang Kebudayaan",
+    company: "Dinas Pariwisata, Kebudayaan, Kepemudaan dan Olahraga Kota Pekalongan",
+    period: "2026",
     description:
-      "Menyelesaikan studi dengan fokus di Rekayasa Perangkat Lunak. Skripsi: Implementasi Machine Learning untuk Sistem Rekomendasi Produk.",
-    type: "education",
+      "Membuat sistem watermarking berbasis seed untuk melindungi dokumen digital kebudayaan Kota Pekalongan.",
+    type: "work",
   },
 ];
 
